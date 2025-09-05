@@ -1,0 +1,10 @@
+#heading1{
+  color: rgb(222, 215, 204);
+  font-size:50px;
+}
+#heading2{
+  color: rgb(247, 247, 209);
+}
+.mainSection {
+  padding-top: 80px;  /* adjust based on navbar height */
+}

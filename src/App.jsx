@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar'
-import HeroSection from './pages/Herosection'
+import HeroPage from './components/LandingPage/HeroPage'
+import Footer from './components/Footer';
 
 
 import './App.css'
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <HeroSection />
+      <HeroPage />
+      <Footer />
     </>
   )
 }
