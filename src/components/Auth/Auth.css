@@ -1,0 +1,86 @@
+/* Auth.css */
+.auth-card {
+  border-radius: 15px;
+  border: none;
+  overflow: hidden;
+}
+
+.auth-card .card-body {
+  padding: 2.5rem;
+}
+
+.auth-card h2 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .form-control {
+  border-left: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.auth-card .input-group-text {
+  border-right: none;
+  border-radius: 8px 0 0 8px !important;
+}
+
+.auth-card .btn-primary {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.auth-card .btn-primary:hover {
+  background-color: #0a3780;
+  border-color: #0a3780;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 71, 161, 0.3);
+}
+
+.auth-card .btn-outline-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.auth-card .btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card .form-check-input:checked {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
+.auth-card a {
+  font-weight: 500;
+}
+
+.auth-card .alert {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.auth-card .spinner-border {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .auth-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+}
