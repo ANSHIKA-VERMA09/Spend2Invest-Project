@@ -50,29 +50,22 @@ export default function NavBar() {
             </li>
           </ul>
           {/* <i className="fa-light fa-bell fa-xl me-2" style={"color: #fafafa;"}></i> */}
-          <Link to="/login">
-            <button
-              className="btn me-4 mb-2 fw-semibold"
-              style={{
-                backgroundColor: "rgba(9, 100, 185, 1)",
-                color: "white",
-              }}
-            >
-              Log In
-            </button>
-          </Link>
+          
+         <Link to="/login">
+  <button className="btn me-4 mb-2 fw-semibold"
+    style={{ backgroundColor: "rgba(9, 100, 185, 1)", color: "white" }}>
+    Log In
+  </button>
+</Link>
 
-          <Link to="/register">
-            <button
-              className="btn me-5 mb-2 fw-semibold"
-              style={{
-                backgroundColor: "rgba(9, 100, 185, 1)",
-                color: "white",
-              }}
-            >
-              Get Started
-            </button>
-          </Link>
+<Link to="/signup">   {/* changed register -> signup */}
+  <button className="btn me-5 mb-2 fw-semibold"
+    style={{ backgroundColor: "rgba(9, 100, 185, 1)", color: "white" }}>
+    Get Started
+  </button>
+</Link>
+
+         
         </div>
       </div>
     </nav>

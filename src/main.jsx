@@ -23,7 +23,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<DashBoardPage />} />
       </Routes>
       <Footer />

@@ -1,9 +1,11 @@
+import React from 'react';
 import Hero from "./Hero";
 import Team from "./Team";
+import './AboutPage.css';
+
 export default function AboutPage() {
   return (
-    <div>
-      <h1>About Us</h1>
+    <div className="about-page">
       <Hero />
       <Team />
     </div>

@@ -1,0 +1,278 @@
+/* FeaturePage.css - Updated with new sections */
+.feature-page {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.feature-title {
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.feature-subtitle {
+  color: #495057;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #1976d2;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Section titles for new sections */
+.section-title {
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: #495057;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* How It Works Section */
+.how-it-works {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #0d47a1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.how-it-works h4 {
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.how-it-works p {
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+  background-color: #f8f9fa;
+}
+
+.benefit-icon {
+  color: #0d47a1;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  min-width: 30px;
+}
+
+.benefit-content h4 {
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.benefit-content p {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  border-radius: 10px;
+  padding: 40px;
+  color: white;
+}
+
+.stat-item {
+  padding: 15px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Feature card styling */
+.feature-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px 25px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #0d47a1;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  color: #0d47a1;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.feature-card p {
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.feature-btn {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.feature-btn:hover {
+  background-color: #0a3780;
+  color: white;
+}
+
+/* OpenAccount section styling */
+.open-account {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  border-radius: 10px;
+  padding: 50px 40px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(13, 71, 161, 0.3);
+}
+
+.open-account h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.open-account p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.open-account .btn {
+  background-color: white;
+  color: #0d47a1;
+  font-weight: 600;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.open-account .btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-3px);
+  color: #0a3780;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .feature-title, .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .feature-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-page {
+    padding: 40px 0;
+  }
+  
+  .feature-title, .section-title {
+    font-size: 2rem;
+  }
+  
+  .feature-subtitle, .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .open-account {
+    padding: 40px 25px;
+  }
+  
+  .open-account h2 {
+    font-size: 1.8rem;
+  }
+  
+  .how-it-works, .benefits-section {
+    padding: 30px 20px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
