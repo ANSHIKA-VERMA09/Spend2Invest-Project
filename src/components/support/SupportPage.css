@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .support-hero {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #2d5ea7, #114d89);
   color: white;
   padding: 80px 0;
   position: relative;
@@ -47,7 +47,7 @@
   margin-top: 40px;
 }
 
-.stat-item {
+.stat-item { 
   margin-right: 40px;
   text-align: center;
 }

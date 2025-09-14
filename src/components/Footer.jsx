@@ -6,7 +6,7 @@ function Footer() {
         <div className="container mb-3 p-5" >
             <div className="row" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" ,color: "#949393ff" }}>
                 <div className="col">
-                    <a href="#" style={{ color: "blue", textDecoration: 'none', fontWeight: "bold", fontSize: "18px" }}>
+                    <a href="#" style={{ color: "rgba(9, 100, 185, 1)", textDecoration: 'none', fontWeight: "bold", fontSize: "20px" }}>
                         <i className="fa-solid fa-dollar-sign fa-xl"></i> Spend2Invest
                     </a>
                     <p className='mt-3'>© 2010 - 2025, Spend2Invest. All rights reserved.</p>

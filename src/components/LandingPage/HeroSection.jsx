@@ -10,7 +10,7 @@ function HeroSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "100vh", 
+        height: "95vh", 
         width: "100%" 
       }}
     >

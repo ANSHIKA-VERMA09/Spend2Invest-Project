@@ -8,8 +8,8 @@ export default function NavBar() {
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          &nbsp;Spend2Invest
+        <Link className="navbar-brand" to="/"> &nbsp;&nbsp;&nbsp;
+         <i className="fa-solid fa-dollar-sign fa-xl"></i> Spend2Invest &nbsp;
         </Link>
         <button
           className="navbar-toggler"
@@ -58,7 +58,7 @@ export default function NavBar() {
   </button>
 </Link>
 
-<Link to="/signup">   {/* changed register -> signup */}
+<Link to="/signup"> 
   <button className="btn me-5 mb-2 fw-semibold"
     style={{ backgroundColor: "rgba(9, 100, 185, 1)", color: "white" }}>
     Get Started
