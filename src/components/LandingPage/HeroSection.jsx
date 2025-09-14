@@ -1,5 +1,6 @@
 import heroImage from "../../assets/HeroImage.jpg";
 import "./HeroSection.css";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -19,13 +20,16 @@ function HeroSection() {
           <h1 className="mt-5 fw-bold" id="heading1">
             From expenses to investments,<br /> all in one place.
           </h1>
-          <p id="heading2" className="mt-4 semibold">
+          <p id="heading10" className="mt-4 semibold">
             Track your spending, manage budgets, and discover smart investment opportunities
           </p>
+          <Link to="/about">
+        
           <button className="btn active mt-5 rounded-pill " style={{width:"25%",color:"white"}}>
             Get Started & Learn More &nbsp;&nbsp;
             <i className="fa-solid fa-arrow-right"></i>
           </button>
+            </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 // import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function CallToAction() {
   return (
@@ -10,7 +10,8 @@ export default function CallToAction() {
       </div>
       <div className="d-flex gap-2">
         <button className="btn btn-primary">Get your Dashboard</button>
-        <button className="btn btn-outline-secondary">Learn More</button>
+        <Link to="/about" >
+        <button className="btn btn-outline-secondary">Learn More</button></Link>
       </div>
     </div>
   );

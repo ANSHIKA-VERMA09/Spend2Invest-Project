@@ -1,5 +1,6 @@
 import financeImg from "../../assets/track.jpeg";
 import budgetImg from "../../assets/buget.png";
+import { Link } from "react-router-dom";
 
 export default function TrackBudget() {
     return (
@@ -18,7 +19,9 @@ export default function TrackBudget() {
                     <p className="fs-5">Keep tabs on your money in one place.</p>
                     Link your accounts 
                     <p className="fs-5">and view your connected Expenditures across them in one place.</p>
+                    <Link to="/features" >
                     <button className="btn btn-primary" style={{backgroundColor:"rgba(9, 100, 185, 1)", color:"white"}}>Learn More</button>
+                    </Link>
                 </div>
             </div>
 
@@ -28,7 +31,8 @@ export default function TrackBudget() {
                     <h2 className="mt-5 fs-1 fw-bold">Invest All Money in Right Place</h2>
                     <p className="fs-5">Link your accounts to Invest in the right opportunities.</p>
                     <p className="fs-5">and view your connected Expenditures across them in one place.</p>
-                    <button className="btn btn-primary" style={{backgroundColor:"rgba(9, 100, 185, 1)", color:"white"}}>Learn More</button>
+                    <Link to="/features" >
+                    <button className="btn btn-primary" style={{backgroundColor:"rgba(9, 100, 185, 1)", color:"white"}}>Learn More</button></Link>
                 </div>
 
                 <div className="col p-5">

@@ -4,11 +4,11 @@
  
    
 }
-/* #dashboard-container{
+#dashboard-container{
     background-color: #bebfc0;
-} */
+}
 
-#heading2{
-    color: rgb(3, 54, 103) !important;
+p#heading2{
+    color: rgb(39, 87, 133) !important;
     font-weight: 400  !important;
 }
