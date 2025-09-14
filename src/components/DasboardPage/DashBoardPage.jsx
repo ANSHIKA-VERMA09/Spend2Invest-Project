@@ -11,8 +11,8 @@ export default function DashBoardPage() {
     <div className="container mt-5 pt-4" >
       {/* Header */}
       <div className="text-center mb-5">
-        <h1 className="fw-bold mt-5">Your Financial Dashboard</h1>
-        <p className="text-muted mt-2">Track, manage, and plan your money smarter 🚀</p>
+        <h1 className="fw-bold mt-5" style={{color:"rgba(9, 100, 185, 1)"}}>Your Financial Dashboard</h1>
+        <p className="text-muted mt-2" id="heading2">Track, manage, and plan your money smarter 🚀</p>
         <img src="/src/assets/homeHero.png" alt="Dashboard Illustration" className="img-fluid mb-5" style={{ maxHeight: 600 }} />
       </div>
 

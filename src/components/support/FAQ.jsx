@@ -56,9 +56,6 @@ const FAQ = () => {
         ))}
       </div>
       
-      <div className="text-center mt-4">
-        <button className="btn btn-outline-primary">View All FAQs</button>
-      </div>
     </div>
   );
 };

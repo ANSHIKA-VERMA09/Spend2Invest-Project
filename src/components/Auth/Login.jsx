@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Auth.css';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -19,8 +22,20 @@ const Login = () => {
     }));
   };
 
+  const validateForm = () => {
+    if (!formData.email || !formData.password) {
+      setError('Email and password are required');
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
+    
+    if (!validateForm()) return;
+    
     setIsSubmitting(true);
     
     // Simulate API call
@@ -32,24 +47,29 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    // Simulate Google OAuth
     console.log('Google login clicked');
     // In a real app, you would redirect to Google OAuth
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="card shadow-lg auth-card" style={{ width: '100%', maxWidth: '450px' }}>
+    <div className="container d-flex justify-content-center align-items-center min-vh-100 " style={{ marginTop: '100px',marginBottom: '50px' }}>
+      <div className="card shadow-lg auth-card" style={{ width: '100%', maxWidth: '450px' , height:"550px"}}>
         <div className="card-body p-5">
           <div className="text-center mb-4">
             <h2 className="fw-bold text-primary">Welcome Back</h2>
             <p className="text-muted">Sign in to continue to Spend2Invest</p>
           </div>
           
+          {error && (
+            <div className="alert alert-danger mb-3">
+              {error}
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit}>
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-envelope"></i>
+                <i className="bi bi-envelope-fill"></i>
               </span>
               <input
                 type="email"
@@ -64,10 +84,10 @@ const Login = () => {
             
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-lock"></i>
+                <i className="bi bi-lock-fill"></i>
               </span>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="form-control"
                 name="password"
                 value={formData.password}
@@ -75,6 +95,17 @@ const Login = () => {
                 required
                 placeholder="Password"
               />
+              <button 
+                className="btn btn-outline-secondary" 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <i className="bi bi-eye-slash"></i>
+                ) : (
+                  <i className="bi bi-eye"></i>
+                )}
+              </button>
             </div>
             
             <div className="d-flex justify-content-between align-items-center mb-4">
@@ -120,12 +151,12 @@ const Login = () => {
             className="btn btn-outline-secondary w-100 py-2 d-flex align-items-center justify-content-center"
             onClick={handleGoogleLogin}
           >
-            <i className="fab fa-google me-2"></i>
+            <i className="bi bi-google me-2"></i>
             Continue with Google
           </button>
           
           <div className="text-center mt-4">
-            <p className="mb-0">Don't have an account? <Link to="/signup" className="text-primary text-decoration-none">Sign Up</Link></p>
+            <p className="mb-5">Don't have an account? <Link to="/signup" className="text-primary text-decoration-none">Sign Up</Link></p>
           </div>
         </div>
       </div>

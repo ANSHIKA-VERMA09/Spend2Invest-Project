@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Auth.css';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +12,10 @@ const SignUp = () => {
     confirmPassword: '',
     agreeToTerms: false
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
   const handleChange = (e) => {
@@ -28,53 +32,70 @@ const SignUp = () => {
   };
 
   const validateForm = () => {
+    if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
+      setError('Please fill in all fields');
+      return false;
+    }
+    
     if (formData.password !== formData.confirmPassword) {
       setPasswordError('Passwords do not match');
       return false;
     }
+    
     if (formData.password.length < 8) {
       setPasswordError('Password must be at least 8 characters');
       return false;
     }
+    
+    if (!formData.agreeToTerms) {
+      setError('You must agree to the terms and conditions');
+      return false;
+    }
+    
     return true;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
+    setPasswordError('');
     
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
     
     setIsSubmitting(true);
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Sign up form submitted:', formData);
+      console.log('Signup form submitted:', formData);
       setIsSubmitting(false);
       // In a real app, you would handle registration here
     }, 1500);
   };
 
-  const handleGoogleSignUp = () => {
-    // Simulate Google OAuth
-    console.log('Google sign up clicked');
+  const handleGoogleSignup = () => {
+    console.log('Google signup clicked');
     // In a real app, you would redirect to Google OAuth
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="card shadow-lg auth-card" style={{ width: '100%', maxWidth: '450px' }}>
+    <div className="container d-flex justify-content-center align-items-center min-vh-100 " style={{ marginTop: '100px',marginBottom: '50px' }}>
+      <div className="card shadow-lg auth-card" style={{ width: '100%', maxWidth: '450px',height:'700px' }}>
         <div className="card-body p-5">
           <div className="text-center mb-4">
             <h2 className="fw-bold text-primary">Create Account</h2>
             <p className="text-muted">Join Spend2Invest to manage your finances</p>
           </div>
           
+          {error && (
+            <div className="alert alert-danger mb-3">
+              {error}
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit}>
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-user"></i>
+                <i className="bi bi-person-fill"></i>
               </span>
               <input
                 type="text"
@@ -89,7 +110,7 @@ const SignUp = () => {
             
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-envelope"></i>
+                <i className="bi bi-envelope-fill"></i>
               </span>
               <input
                 type="email"
@@ -104,10 +125,10 @@ const SignUp = () => {
             
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-lock"></i>
+                <i className="bi bi-lock-fill"></i>
               </span>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="form-control"
                 name="password"
                 value={formData.password}
@@ -115,14 +136,25 @@ const SignUp = () => {
                 required
                 placeholder="Password"
               />
+              <button 
+                className="btn btn-outline-secondary" 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <i className="bi bi-eye-slash"></i>
+                ) : (
+                  <i className="bi bi-eye"></i>
+                )}
+              </button>
             </div>
             
             <div className="mb-3 input-group">
               <span className="input-group-text bg-primary text-white">
-                <i className="fas fa-lock"></i>
+                <i className="bi bi-lock-fill"></i>
               </span>
               <input
-                type="password"
+                type={showConfirmPassword ? "text" : "password"}
                 className="form-control"
                 name="confirmPassword"
                 value={formData.confirmPassword}
@@ -130,6 +162,17 @@ const SignUp = () => {
                 required
                 placeholder="Confirm Password"
               />
+              <button 
+                className="btn btn-outline-secondary" 
+                type="button"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? (
+                  <i className="bi bi-eye-slash"></i>
+                ) : (
+                  <i className="bi bi-eye"></i>
+                )}
+              </button>
             </div>
             {passwordError && <div className="alert alert-danger py-2">{passwordError}</div>}
             
@@ -170,9 +213,9 @@ const SignUp = () => {
           
           <button 
             className="btn btn-outline-secondary w-100 py-2 d-flex align-items-center justify-content-center"
-            onClick={handleGoogleSignUp}
+            onClick={handleGoogleSignup}
           >
-            <i className="fab fa-google me-2"></i>
+            <i className="bi bi-google me-2"></i>
             Sign Up with Google
           </button>
           
