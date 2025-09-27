@@ -1,31 +1,32 @@
 // import React from 'react';
 import TeamMember from './TeamMember';
+import './Team.css';
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Anshika Verma",
       role: "Lead Developer",
-      bio: "Financial strategist with 10+ years of experience in investment banking and fintech innovation.",
-      image: "https://z-cdn-media.chatglm.cn/files/team-anshika.jpg" // Replace with actual image URL
+      bio: "Web development and Deployment",
+      image: "/src/assets/anshika4.jpg" 
     },
     {
       name: "Shreya Singh",
       role: "Data Analyst",
-      bio: "Tech visionary specializing in AI-driven financial solutions and secure platform architecture.",
-      image: "https://z-cdn-media.chatglm.cn/files/team-shreya.jpg" // Replace with actual image URL
+      bio: "Tabular and Data Visualization Expert",
+      image: "/src/assets/Shreya.jpg" // Replace with actual image URL
     },
     {
       name: "Pankaj Bora",
       role: "AI/Ml Model Developer",
-      bio: "Investment expert with a passion for democratizing wealth management through technology.",
-      image: "https://z-cdn-media.chatglm.cn/files/team-pankaj.jpg" // Replace with actual image URL
+      bio: "Model Training and Deployment Specialist",
+      image: "/src/assets/Pankaj.jpg" // Replace with actual image URL
     },
     {
       name: "Pratyush Kushwaha",
       role: "Data Analyst/PowerBI Specialist",
-      bio: "Marketing guru focused on financial literacy and user-centered product development.",
-      image: "https://z-cdn-media.chatglm.cn/files/team-pratyush.jpg" // Replace with actual image URL
+      bio: "Graphic designer and Documentations",
+      image: "/src/assets/Pratyush.jpg" // Replace with actual image URL
     }
   ];
 

@@ -1,13 +1,14 @@
-import React from 'react';
+// import React from 'react';
+import './Team.css';
 
 const TeamMember = ({ name, role, bio, image }) => {
   return (
     <div className="team-member">
       <div className="member-image">
-        <img src={image} alt={name} className="img-fluid" />
+        <img src={image} alt={name} className="team-img" />
         <div className="social-icons">
           <a href="#!" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#!" className="social-icon"><i className="fab fa-twitter"></i></a>
+         
         </div>
       </div>
       <div className="member-info">
